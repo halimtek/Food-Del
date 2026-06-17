@@ -3,7 +3,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useContext, useState } from 'react'
 import './Navbar.css'
-import assets from '../../assets/assets'
+import {assets }from '../../assets/assets'
+import injerago from '../../assets/injerago.png'
 import {Link, useNavigate} from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
@@ -22,7 +23,7 @@ const Navbar = ({setShowLogin}) => {
     }
   return (
     <div className='navbar'>
-        <Link to='/'><img src={assets.injerago} alt="" className='logo' /></Link>
+        <Link to='/'><img src={injerago} alt="" className='logo' /></Link>
         <ul className='navbar-menu'>
             <Link to={'/'} onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>home</Link>
             <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>menu</a>
