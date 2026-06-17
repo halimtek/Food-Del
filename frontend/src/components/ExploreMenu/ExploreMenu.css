@@ -1,46 +1,80 @@
 .explore-menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    margin-top: 70px;
 }
-.explore-menu h1 {
-    color: #262626;
-    font-weight: 500;
+.explore-menu h2 {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--ink);
 }
 .explore-menu-text {
-    max-width: 60%;
-    columns: #808080;
-
+    max-width: 560px;
+    color: var(--ink-soft);
+    line-height: 1.6;
 }
 .explore-menu-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 30px;
+    gap: 34px;
     text-align: center;
-    margin: 20px 0px;
-    overflow-x: scroll;
+    margin: 30px 0px 24px;
+    overflow-x: auto;
+    padding-bottom: 6px;
 }
 .explore-menu-list::-webkit-scrollbar {
     display: none;
 }
-.explore-menu-list-item img {
-    width: 7.5vw;
-    min-width: 80px;
+.explore-menu-list-item{
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.explore-menu-ring{
+    width: 7.2vw;
+    min-width: 84px;
+    max-width: 100px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
-    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--paper);
+    border: 2px solid var(--line);
+    padding: 12px;
+    transition: 0.25s;
+}
+.explore-menu-ring img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.explore-menu-list-item:hover .explore-menu-ring{
+    border-color: var(--tomato);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+}
+.explore-menu-ring.active {
+    border: 3px solid var(--tomato);
+    background: var(--tomato-tint);
+    box-shadow: var(--shadow-soft);
+}
+.explore-menu-list-item p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
 }
 .explore-menu hr {
-    margin: 10px;
-    height: 2px;
-    background-color: #e2e2e2;
+    margin: 14px 0 0;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px);
     border: none;
-}
-.explore-menu-list-item .active {
-    border: 4px solid tomato;
-    padding: 2px;
-
 }
 @media(max-width:1050px){
     .explore-menu-text{

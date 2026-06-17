@@ -1,23 +1,59 @@
 .app-download {
-    margin: auto;
-    margin-top: 100px;
-    font-size: max(3vw, 20px);
+    position: relative;
+    overflow: hidden;
+    margin: 110px auto 0;
+    padding: 70px 30px 56px;
+    border-radius: 28px;
+    background: var(--charcoal);
+    color: var(--cream);
     text-align: center;
-    font-weight: 500;
-
+}
+.app-download-sunburst{
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    fill: var(--tomato);
+    opacity: 0.18;
+    animation: spinSlow 60s linear infinite;
+}
+.app-download-eyebrow{
+    justify-content: center;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+.app-download-eyebrow::before{
+    background: var(--gold);
+}
+.app-download-title{
+    position: relative;
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.6vw, 38px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+.app-download-tear{
+    position: relative;
+    width: min(420px, 80%);
+    margin: 38px auto 34px;
+    border-top: 2px dashed rgba(255, 248, 237, 0.25);
 }
 .app-download-platforms {
+    position: relative;
     display: flex;
     justify-content: center;
-    gap: max(2vw, 10px);
-    margin-top: 40px;
+    gap: max(2vw, 14px);
 }
 .app-download-platforms img {
-    width: max(30vw, 120px);
-    max-width: 180px;
-    transition: 0.5s;
+    width: max(28vw, 130px);
+    max-width: 170px;
+    transition: 0.3s;
     cursor: pointer;
 }
 .app-download-platforms img:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+}
+@media(prefers-reduced-motion: reduce){
+    .app-download-sunburst{ animation: none; }
 }

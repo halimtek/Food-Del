@@ -1,23 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
+
+:root{
+  /* -- Tomato crate-label palette -- */
+  --tomato: #FF4329;
+  --tomato-deep: #B8280F;
+  --tomato-tint: #FFE4DA;
+  --basil: #3E7250;
+  --basil-tint: #E3EEE3;
+  --gold: #EFA53C;
+  --ink: #241509;
+  --ink-soft: #6b5d52;
+  --cream: #FFF8ED;
+  --paper: #FFFFFF;
+  --charcoal: #1B130C;
+  --line: #EDE0D1;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Outfit", sans-serif;
+
+  --shadow-soft: 0 12px 30px -12px rgba(36, 21, 9, 0.18);
+  --shadow-pop: 0 18px 40px -14px rgba(184, 40, 15, 0.35);
+}
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: var(--font-body);
   scroll-behavior: smooth;
 }
 body{
   min-height: 100vh;
+  background: var(--cream);
+  color: var(--ink);
 }
 a{
   text-decoration: none;
   color: inherit;
 }
 .app{
-  width: 80%;
+  width: 88%;
+  max-width: 1320px;
   margin: auto;
 }
+hr{
+  border: none;
+}
+
+/* shared utility bits used across pages */
+.eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tomato-deep);
+}
+.eyebrow::before{
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tomato);
+}
+.btn{
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.btn-primary{
+  background: var(--tomato);
+  color: white;
+  box-shadow: var(--shadow-pop);
+}
+.btn-primary:hover{
+  background: var(--tomato-deep);
+  transform: translateY(-2px);
+}
+.btn-ghost{
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+}
+.btn-ghost:hover{
+  border-color: var(--ink);
+}
+
 @keyframes fadeIn {
   0%{
     opacity: 0;
@@ -25,5 +101,12 @@ a{
   100%{
     opacity: 1;
   }
-  
+
+}
+@keyframes floatY{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-10px); }
+}
+@keyframes spinSlow{
+  100%{ transform: rotate(360deg); }
 }

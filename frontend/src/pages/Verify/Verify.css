@@ -3,13 +3,13 @@
     display: grid;
 }
 .verify .spinner{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     place-self: center;
-    border: 5px solid #bdbdbd;
-    border-top-color: tomato;
+    border: 5px solid var(--line);
+    border-top-color: var(--tomato);
     border-radius: 50%;
-    animation: rotate 1s infinite;
+    animation: rotate 0.9s linear infinite;
 }
 @keyframes rotate {
     100%{
