@@ -9,7 +9,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
         <div className="footer-content">
           <div className="footer-content-left">
-            <img src={assets.logo} alt="" />
+            <img src={assets.InjeraGo1} alt="" />
             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which  look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there  anything embarrassing hidden in the middle of text</p>
             <div className="footer-social-icons">
 
@@ -34,14 +34,14 @@ const Footer = () => {
             <h2>GET IN TOUCH</h2>
             <ul>
               <li>+1-212-456-7890</li>
-              <li>contact@tomato.com</li>
+              <li>contact@injerago.com</li>
             </ul>
 
           </div>
         </div>
         <hr />
         <p className="footer-copyright">
-          Copyright 2024 © tomato.com - All Right reserved.
+          Copyright 2024 © InjeraGo.com - All Right reserved.
         </p>
 
     </div>
