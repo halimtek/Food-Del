@@ -20,7 +20,7 @@ const AppDownload = () => {
           ))}
         </svg>
         <p className="eyebrow app-download-eyebrow">Take it with you</p>
-        <p className="app-download-title">For a better experience,<br />download the Tomato app</p>
+        <p className="app-download-title">For a better experience,<br />download the InjeraGo app</p>
         <div className="app-download-tear"></div>
         <div className="app-download-platforms">
             <img src={assets.play_store} alt="Get it on Google Play" />
